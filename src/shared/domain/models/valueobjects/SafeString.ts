@@ -1,5 +1,5 @@
 
-class SafeString {
+export class SafeString {
   private value: string;
 
   private static dangerousCharactersPattern = /['"`;<>\$%&\|\\]/;
