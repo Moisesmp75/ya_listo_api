@@ -26,23 +26,3 @@ export class User {
   public setPassword(password: string) { this.password.setPassword(password); }
   public getRoles(): number[] { return this.roles.getValues(); }
 }
-
-function testUserCreation(data: {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  roles: number[];
-}) {
-  try {
-    const user = new User(data.id, data.firstName, data.lastName, data.email, data.password, data.roles);
-    console.log('Usuario creado correctamente:', user.getId());
-  } catch (error) {
-    if (error instanceof Error) {
-      console.error('Error:', error.message);
-    } else {
-      console.error('Error desconocido');
-    }
-  }
-}
