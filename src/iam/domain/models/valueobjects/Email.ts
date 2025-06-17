@@ -18,7 +18,7 @@ export class Email {
     //   throw new Error("Email contains dangerous characters");
     // }
 
-    this.email = email;
+    this.email = email.toLocaleLowerCase();
   }
 
   public getValue(): string {
